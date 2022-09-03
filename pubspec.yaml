@@ -22,6 +22,7 @@ dependencies:
   equatable: 2.0.3
   connectivity_plus: ^2.3.0
   universal_platform: ^1.0.0+1
+  flutter_svg: ^1.0.3
 
 dev_dependencies:
   flutter_test:
@@ -33,7 +34,8 @@ flutter:
   uses-material-design: true
 
   assets:
-    - assets/images
+    # - assets/images
+    - assets/icons/
 
   fonts:
     - family: OpenSans
