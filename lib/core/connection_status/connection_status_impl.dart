@@ -30,8 +30,7 @@ class ConnectionStatusImpl implements ConnectionStatus {
 
     for (final address in urls) {
       try {
-        final response = await InternetAddress.lookup(address)
-            .timeout(const Duration(seconds: 15));
+        final response = await InternetAddress.lookup(address).timeout(const Duration(seconds: 15));
 
         if (response.isNotEmpty) {
           responses.addAll(response);
