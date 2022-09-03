@@ -211,6 +211,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.2.1"
+  dartz:
+    dependency: "direct main"
+    description:
+      name: dartz
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.10.1"
   dbus:
     dependency: transitive
     description:
@@ -225,13 +232,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "4.0.6"
-  dio_interceptors:
-    dependency: "direct main"
-    description:
-      name: dio_interceptors
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "0.0.5-nullsafety"
   equatable:
     dependency: "direct main"
     description:

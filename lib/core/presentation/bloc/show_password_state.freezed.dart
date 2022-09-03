@@ -49,7 +49,8 @@ mixin _$ShowPasswordState {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_ShowPasswordStateShowPassword value) showPassword,
+    required TResult Function(_ShowPasswordStateShowPassword value)
+        showPassword,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -65,7 +66,8 @@ mixin _$ShowPasswordState {
       throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
-  $ShowPasswordStateCopyWith<ShowPasswordState> get copyWith => throw _privateConstructorUsedError;
+  $ShowPasswordStateCopyWith<ShowPasswordState> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -77,7 +79,8 @@ abstract class $ShowPasswordStateCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$ShowPasswordStateCopyWithImpl<$Res> implements $ShowPasswordStateCopyWith<$Res> {
+class _$ShowPasswordStateCopyWithImpl<$Res>
+    implements $ShowPasswordStateCopyWith<$Res> {
   _$ShowPasswordStateCopyWithImpl(this._value, this._then);
 
   final ShowPasswordState _value;
@@ -100,7 +103,8 @@ class _$ShowPasswordStateCopyWithImpl<$Res> implements $ShowPasswordStateCopyWit
 /// @nodoc
 abstract class _$ShowPasswordStateShowPasswordCopyWith<$Res>
     implements $ShowPasswordStateCopyWith<$Res> {
-  factory _$ShowPasswordStateShowPasswordCopyWith(_ShowPasswordStateShowPassword value,
+  factory _$ShowPasswordStateShowPasswordCopyWith(
+          _ShowPasswordStateShowPassword value,
           $Res Function(_ShowPasswordStateShowPassword) then) =
       __$ShowPasswordStateShowPasswordCopyWithImpl<$Res>;
   @override
@@ -112,11 +116,13 @@ class __$ShowPasswordStateShowPasswordCopyWithImpl<$Res>
     extends _$ShowPasswordStateCopyWithImpl<$Res>
     implements _$ShowPasswordStateShowPasswordCopyWith<$Res> {
   __$ShowPasswordStateShowPasswordCopyWithImpl(
-      _ShowPasswordStateShowPassword _value, $Res Function(_ShowPasswordStateShowPassword) _then)
+      _ShowPasswordStateShowPassword _value,
+      $Res Function(_ShowPasswordStateShowPassword) _then)
       : super(_value, (v) => _then(v as _ShowPasswordStateShowPassword));
 
   @override
-  _ShowPasswordStateShowPassword get _value => super._value as _ShowPasswordStateShowPassword;
+  _ShowPasswordStateShowPassword get _value =>
+      super._value as _ShowPasswordStateShowPassword;
 
   @override
   $Res call({
@@ -133,7 +139,8 @@ class __$ShowPasswordStateShowPasswordCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_ShowPasswordStateShowPassword implements _ShowPasswordStateShowPassword {
+class _$_ShowPasswordStateShowPassword
+    implements _ShowPasswordStateShowPassword {
   const _$_ShowPasswordStateShowPassword({required this.showPassword});
 
   @override
@@ -149,17 +156,19 @@ class _$_ShowPasswordStateShowPassword implements _ShowPasswordStateShowPassword
     return identical(this, other) ||
         (other is _ShowPasswordStateShowPassword &&
             (identical(other.showPassword, showPassword) ||
-                const DeepCollectionEquality().equals(other.showPassword, showPassword)));
+                const DeepCollectionEquality()
+                    .equals(other.showPassword, showPassword)));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode ^ const DeepCollectionEquality().hash(showPassword);
+  int get hashCode =>
+      runtimeType.hashCode ^ const DeepCollectionEquality().hash(showPassword);
 
   @JsonKey(ignore: true)
   @override
-  _$ShowPasswordStateShowPasswordCopyWith<_ShowPasswordStateShowPassword> get copyWith =>
-      __$ShowPasswordStateShowPasswordCopyWithImpl<_ShowPasswordStateShowPassword>(
-          this, _$identity);
+  _$ShowPasswordStateShowPasswordCopyWith<_ShowPasswordStateShowPassword>
+      get copyWith => __$ShowPasswordStateShowPasswordCopyWithImpl<
+          _ShowPasswordStateShowPassword>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -192,7 +201,8 @@ class _$_ShowPasswordStateShowPassword implements _ShowPasswordStateShowPassword
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_ShowPasswordStateShowPassword value) showPassword,
+    required TResult Function(_ShowPasswordStateShowPassword value)
+        showPassword,
   }) {
     return showPassword(this);
   }
@@ -226,6 +236,6 @@ abstract class _ShowPasswordStateShowPassword implements ShowPasswordState {
   bool get showPassword => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$ShowPasswordStateShowPasswordCopyWith<_ShowPasswordStateShowPassword> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$ShowPasswordStateShowPasswordCopyWith<_ShowPasswordStateShowPassword>
+      get copyWith => throw _privateConstructorUsedError;
 }

@@ -19,4 +19,6 @@ class AppColors {
   static const blue = Color(0XFF0E4593);
 
   static const errorField = Color(0XFF7F1B38);
+
+  static const yellow = Color(0XFFFFDB06);
 }

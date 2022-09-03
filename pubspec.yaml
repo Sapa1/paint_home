@@ -15,7 +15,6 @@ dependencies:
   cupertino_icons: ^1.0.2
   flutter_bloc: ^8.1.1
   dio: ^4.0.6
-  dio_interceptors: 0.0.5-nullsafety
   flutter_modular: ^5.0.2
   shared_preferences: ^2.0.15
   flutter_secure_storage: ^5.0.2
@@ -23,6 +22,7 @@ dependencies:
   connectivity_plus: ^2.3.0
   universal_platform: ^1.0.0+1
   flutter_svg: ^1.0.3
+  dartz: ^0.10.1
 
 scripts:
   build: "flutter packages run build_runner build"
