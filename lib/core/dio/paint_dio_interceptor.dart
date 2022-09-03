@@ -45,8 +45,7 @@ class PaintDioInterceptor extends InterceptorsWrapper {
 
   Future<String?> getToken() async {
     try {
-      return await Modular.get<SecureLocalStorage>()
-          .getData(key: AppLocalStorageKeys.token);
+      return await Modular.get<SecureLocalStorage>().getData(key: AppLocalStorageKeys.token);
     } on Exception catch (e) {
       debugPrint(e.toString());
     }

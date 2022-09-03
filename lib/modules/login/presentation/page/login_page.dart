@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_modular/flutter_modular.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:paint_home/core/const/images.dart';
 import 'package:paint_home/core/styles/colors.dart';
@@ -7,6 +9,9 @@ import 'package:paint_home/core/widgets/body_page_scroll_widget.dart';
 import 'package:paint_home/core/widgets/wrap_scaffold_widget.dart';
 
 import '../../../../core/const/strings.dart';
+import '../../../../core/presentation/bloc/show_password_bloc.dart';
+import '../../../../core/presentation/bloc/show_password_event.dart';
+import '../../../../core/presentation/bloc/show_password_state.dart';
 import '../../../../core/validators/validators.dart';
 import '../../../../core/widgets/elevated_button_widget.dart';
 import '../../../../core/widgets/text_form_field_widget.dart';
@@ -30,6 +35,8 @@ class _LoginPageState extends State<LoginPage> {
   late final FocusNode _emailFocus;
   late final FocusNode _passwordFocus;
 
+  late final ShowPasswordBloc _showPasswordBloc;
+
   @override
   void initState() {
     super.initState();
@@ -40,6 +47,8 @@ class _LoginPageState extends State<LoginPage> {
 
     _passwordFocus = FocusNode();
     _emailFocus = FocusNode();
+
+    _showPasswordBloc = Modular.get<ShowPasswordBloc>();
   }
 
   @override
@@ -91,17 +100,30 @@ class _LoginPageState extends State<LoginPage> {
                       ),
                       const SizedBox(height: 20),
                       const TextWidget(text: AppStrings.password),
-                      TextFormFieldWidget(
-                        textInputAction: TextInputAction.done,
-                        focusNode: _passwordFocus,
-                        obscureText: true,
-                        hintText: AppStrings.password,
-                        controller: _controllerPassword,
-                        suffixIcon: const Icon(Icons.visibility_off),
-                        validator: Validators.multiple([
-                          Validators.required(AppStrings.requiredField),
-                        ]),
-                        onTapSuffixIcon: () {},
+                      BlocBuilder<ShowPasswordBloc, ShowPasswordState>(
+                        bloc: _showPasswordBloc,
+                        builder: (context, state) {
+                          return TextFormFieldWidget(
+                            textInputAction: TextInputAction.done,
+                            focusNode: _passwordFocus,
+                            obscureText: state.showPassword,
+                            hintText: AppStrings.password,
+                            controller: _controllerPassword,
+                            suffixIcon: state.showPassword
+                                ? const Icon(Icons.visibility_off)
+                                : const Icon(Icons.visibility),
+                            onTapSuffixIcon: () {
+                              state.maybeWhen(
+                                showPassword: (showPassword) => _showPasswordBloc
+                                    .add(HandleShowPassword(showPassword: showPassword)),
+                                orElse: () => null,
+                              );
+                            },
+                            validator: Validators.multiple([
+                              Validators.required(AppStrings.requiredField),
+                            ]),
+                          );
+                        },
                       ),
                     ],
                   ),

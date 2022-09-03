@@ -8,6 +8,7 @@ import 'core/const/routes.dart';
 import 'core/dio/paint_dio.dart';
 import 'core/local_storage/local_storage_impl.dart';
 import 'core/local_storage/secure_local_storage_impl.dart';
+import 'core/presentation/bloc/show_password_bloc.dart';
 import 'modules/login/login_module.dart';
 
 class AppModule extends Module {
@@ -27,6 +28,7 @@ class AppModule extends Module {
         Bind.factory((i) => LocalStorageImpl()),
 
         //Bloc
+        Bind.factory((i) => ShowPasswordBloc()),
 
         //usecase
 

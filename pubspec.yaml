@@ -24,9 +24,17 @@ dependencies:
   universal_platform: ^1.0.0+1
   flutter_svg: ^1.0.3
 
+scripts:
+  build: "flutter packages run build_runner build"
+  watch: "flutter packages run build_runner watch"
+  delete: "flutter packages run build_runner build --delete-conflicting-outputs"
+  format: "flutter format --line-length 100 ./lib/core/ ./lib/modules/ ./lib/main.dart ./lib/app_module.dart ./lib/app_widget.dart ./lib/firebase_options.dart"
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  build_runner: 2.1.2
+  freezed: 0.14.5
 
   flutter_lints: ^2.0.0
 
