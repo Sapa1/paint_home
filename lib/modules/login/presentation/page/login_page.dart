@@ -65,6 +65,16 @@ class _LoginPageState extends State<LoginPage> {
   }
 
   @override
+  void dispose() {
+    super.dispose();
+    _controllerEmail.dispose();
+    _controllerPassword.dispose();
+
+    _emailFocus.dispose();
+    _passwordFocus.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) => WrapScaffoldWidget(
         child: Scaffold(
           backgroundColor: AppColors.purpleBackground,

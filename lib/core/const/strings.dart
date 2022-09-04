@@ -7,4 +7,10 @@ class AppStrings {
   static const invalidEmail = 'E-mail inválido';
   static const login = 'Login';
   static const createAccount = 'Criar conta';
+  static const howToPaint = 'Como pintar';
+  static const askQuestions = 'Tirar dúvidas';
+  static const recommendation = 'Indicação';
+  static const differentials = 'Diferenciais';
+  static const paintOptions = 'Opções de tintas';
+  static const addToCart = 'Adicionar ao carrinho';
 }
