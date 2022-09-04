@@ -1,5 +1,8 @@
 import 'package:flutter_modular/flutter_modular.dart';
+import 'package:paint_home/modules/home/presentation/page/cart_page.dart';
 import 'package:paint_home/modules/home/presentation/page/home_page.dart';
+import 'package:paint_home/modules/home/presentation/page/home_pageview.dart';
+import 'package:paint_home/modules/home/presentation/page/profile_page.dart';
 
 import '../../core/const/routes.dart';
 import 'data/datasources/home_datasource.dart';
@@ -29,7 +32,19 @@ class HomeModule extends Module {
   List<ModularRoute> get routes => [
         ChildRoute(
           AppRoutes.initial,
+          child: (context, args) => const HomePageView(),
+        ),
+        ChildRoute(
+          AppRoutes.home,
           child: (context, args) => const HomePage(),
+        ),
+        ChildRoute(
+          AppRoutes.cart,
+          child: (context, args) => const CartPage(),
+        ),
+        ChildRoute(
+          AppRoutes.profile,
+          child: (context, args) => const ProfilePage(),
         ),
       ];
 }

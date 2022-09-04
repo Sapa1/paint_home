@@ -50,7 +50,7 @@ class _HomeSectionState extends State<HomeSection> {
               AppStrings.paintOptions,
               style: AppTextStyles.sans26bold.copyWith(color: AppColors.lightBlack),
             ),
-            const SizedBox(height: 53),
+            const SizedBox(height: 23),
             SizedBox(
               height: 349,
               child: PageView.builder(
@@ -103,9 +103,8 @@ class _HomeSectionState extends State<HomeSection> {
                 ),
               ),
             ),
-            const SizedBox(height: 30),
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 32),
+              padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 30),
               child: ElevatedButtonWidget(
                 text: AppStrings.addToCart,
                 elevatedButtonType: ElevatedButtonType.purple,
