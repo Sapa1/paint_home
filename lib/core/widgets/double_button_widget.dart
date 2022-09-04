@@ -32,7 +32,7 @@ class DoubleButtonWidget extends StatelessWidget {
   Widget buildLeft(BuildContext context) => ElevatedButton(
         onPressed: onPressed,
         style: ButtonStyle(
-          maximumSize: MaterialStateProperty.all(Size(buttonMaxWidth ?? 136, 44)),
+          maximumSize: MaterialStateProperty.all(Size(buttonMaxWidth ?? double.infinity, 44)),
           backgroundColor: MaterialStateProperty.all(AppColors.purpleBackground),
           elevation: MaterialStateProperty.all(0),
           shape: MaterialStateProperty.all(
@@ -67,7 +67,7 @@ class DoubleButtonWidget extends StatelessWidget {
   Widget buildRight(BuildContext context) => ElevatedButton(
         onPressed: onPressed,
         style: ButtonStyle(
-          maximumSize: MaterialStateProperty.all(Size(buttonMaxWidth ?? 136, 44)),
+          maximumSize: MaterialStateProperty.all(Size(buttonMaxWidth ?? double.infinity, 44)),
           backgroundColor: MaterialStateProperty.all(AppColors.littleDarkGray),
           elevation: MaterialStateProperty.all(0),
           shape: MaterialStateProperty.all(

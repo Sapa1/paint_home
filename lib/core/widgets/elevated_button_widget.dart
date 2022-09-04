@@ -33,11 +33,11 @@ class ElevatedButtonWidget extends StatelessWidget {
         onPressed: onPressed,
         style: ButtonStyle(
           maximumSize: MaterialStateProperty.all(const Size(double.infinity, 53)),
-          backgroundColor: MaterialStateProperty.all(AppColors.white),
+          backgroundColor: MaterialStateProperty.all(AppColors.purpleBackground),
           elevation: MaterialStateProperty.all(0),
           shape: MaterialStateProperty.all(
             RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(8),
+              borderRadius: BorderRadius.circular(80),
               side: const BorderSide(
                 color: AppColors.transparent,
               ),
@@ -51,8 +51,8 @@ class ElevatedButtonWidget extends StatelessWidget {
             children: [
               Text(
                 text,
-                style: AppTextStyles.sans16regular.copyWith(
-                  color: AppColors.purpleBackground,
+                style: AppTextStyles.sans19bold.copyWith(
+                  color: AppColors.littleDarkWhite,
                 ),
               ),
             ],

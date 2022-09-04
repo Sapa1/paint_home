@@ -41,4 +41,14 @@ class AppTextStyles {
     fontSize: 22,
     fontWeight: FontWeight.bold,
   );
+  static TextStyle sans26bold = const TextStyle(
+    fontFamily: 'OpenSans',
+    fontSize: 26,
+    fontWeight: FontWeight.bold,
+  );
+  static TextStyle sans19bold = const TextStyle(
+    fontFamily: 'OpenSans',
+    fontSize: 19,
+    fontWeight: FontWeight.bold,
+  );
 }

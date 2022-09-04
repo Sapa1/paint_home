@@ -11,4 +11,6 @@ class AppStrings {
   static const askQuestions = 'Tirar dúvidas';
   static const recommendation = 'Indicação';
   static const differentials = 'Diferenciais';
+  static const paintOptions = 'Opções de tintas';
+  static const addToCart = 'Adicionar ao carrinho';
 }
