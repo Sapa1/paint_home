@@ -17,9 +17,9 @@ class AppTextStyles {
     fontWeight: FontWeight.bold,
   );
   static TextStyle sans14light = const TextStyle(
-    fontFamily: 'OpenSans',
+    fontFamily: 'OpenSans-Light',
     fontSize: 14,
-    fontWeight: FontWeight.w300,
+    // fontWeight: FontWeight.w300,
   );
   static TextStyle sans18bold = const TextStyle(
     fontFamily: 'OpenSans',
@@ -50,5 +50,10 @@ class AppTextStyles {
     fontFamily: 'OpenSans',
     fontSize: 19,
     fontWeight: FontWeight.bold,
+  );
+  static TextStyle sans12semiBold = const TextStyle(
+    fontFamily: 'OpenSans',
+    fontSize: 12,
+    fontWeight: FontWeight.w600,
   );
 }

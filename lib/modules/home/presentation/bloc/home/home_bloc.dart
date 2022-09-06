@@ -2,7 +2,7 @@ import 'dart:async';
 
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../domain/usecases/get_paint_usecase.dart';
+import '../../../domain/usecases/get_paint_usecase.dart';
 import 'home_event.dart';
 import 'home_state.dart';
 

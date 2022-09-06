@@ -37,6 +37,7 @@ class _HomePageViewState extends State<HomePageView> {
         child: Scaffold(
           body: PageView(
             controller: pageController,
+            physics: const NeverScrollableScrollPhysics(),
             children: const [
               HomePage(),
               CartPage(),
