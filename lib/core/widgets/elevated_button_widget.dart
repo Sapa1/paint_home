@@ -9,12 +9,14 @@ class ElevatedButtonWidget extends StatelessWidget {
   final String text;
   final VoidCallback? onPressed;
   final double? buttonMaxWidth;
+  final ButtonStyle? style;
 
   const ElevatedButtonWidget({
     required this.elevatedButtonType,
     required this.text,
     this.onPressed,
     this.buttonMaxWidth,
+    this.style,
     Key? key,
   }) : super(key: key);
 
@@ -62,19 +64,20 @@ class ElevatedButtonWidget extends StatelessWidget {
 
   Widget buildWhite(BuildContext context) => ElevatedButton(
         onPressed: onPressed,
-        style: ButtonStyle(
-          maximumSize: MaterialStateProperty.all(Size(buttonMaxWidth ?? double.infinity, 48)),
-          backgroundColor: MaterialStateProperty.all(AppColors.white),
-          elevation: MaterialStateProperty.all(0),
-          shape: MaterialStateProperty.all(
-            RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(80),
-              side: const BorderSide(
-                color: AppColors.transparent,
+        style: style ??
+            ButtonStyle(
+              maximumSize: MaterialStateProperty.all(Size(buttonMaxWidth ?? double.infinity, 48)),
+              backgroundColor: MaterialStateProperty.all(AppColors.white),
+              elevation: MaterialStateProperty.all(0),
+              shape: MaterialStateProperty.all(
+                RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(80),
+                  side: const BorderSide(
+                    color: AppColors.transparent,
+                  ),
+                ),
               ),
             ),
-          ),
-        ),
         child: SizedBox(
           height: 53,
           child: Row(

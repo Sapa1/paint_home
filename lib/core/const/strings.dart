@@ -13,4 +13,6 @@ class AppStrings {
   static const differentials = 'Diferenciais';
   static const paintOptions = 'Opções de tintas';
   static const addToCart = 'Adicionar ao carrinho';
+  static const confirmBuy = 'Confirmar compra';
+  static const cart = 'Carrinho';
 }

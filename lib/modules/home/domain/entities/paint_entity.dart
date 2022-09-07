@@ -2,7 +2,7 @@ import 'dart:convert';
 
 import 'package:equatable/equatable.dart';
 
-import 'description_entiry.dart';
+import 'description_entity.dart';
 
 class PaintEntity extends Equatable {
   final String image;

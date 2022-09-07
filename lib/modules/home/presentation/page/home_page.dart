@@ -4,10 +4,10 @@ import 'package:flutter_modular/flutter_modular.dart';
 import 'package:paint_home/core/styles/colors.dart';
 import 'package:paint_home/core/widgets/body_page_scroll_widget.dart';
 import 'package:paint_home/core/widgets/wrap_scaffold_widget.dart';
-import 'package:paint_home/modules/home/presentation/bloc/home_event.dart';
+import 'package:paint_home/modules/home/presentation/bloc/home/home_event.dart';
 
-import '../bloc/home_bloc.dart';
-import '../bloc/home_state.dart';
+import '../bloc/home/home_bloc.dart';
+import '../bloc/home/home_state.dart';
 import '../widget/home_section.dart';
 
 class HomePage extends StatefulWidget {
