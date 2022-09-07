@@ -118,9 +118,11 @@ abstract class _$CartStateInitialCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$CartStateInitialCopyWithImpl<$Res> extends _$CartStateCopyWithImpl<$Res>
+class __$CartStateInitialCopyWithImpl<$Res>
+    extends _$CartStateCopyWithImpl<$Res>
     implements _$CartStateInitialCopyWith<$Res> {
-  __$CartStateInitialCopyWithImpl(_CartStateInitial _value, $Res Function(_CartStateInitial) _then)
+  __$CartStateInitialCopyWithImpl(
+      _CartStateInitial _value, $Res Function(_CartStateInitial) _then)
       : super(_value, (v) => _then(v as _CartStateInitial));
 
   @override
@@ -232,9 +234,11 @@ abstract class _$CartStateLoadingCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$CartStateLoadingCopyWithImpl<$Res> extends _$CartStateCopyWithImpl<$Res>
+class __$CartStateLoadingCopyWithImpl<$Res>
+    extends _$CartStateCopyWithImpl<$Res>
     implements _$CartStateLoadingCopyWith<$Res> {
-  __$CartStateLoadingCopyWithImpl(_CartStateLoading _value, $Res Function(_CartStateLoading) _then)
+  __$CartStateLoadingCopyWithImpl(
+      _CartStateLoading _value, $Res Function(_CartStateLoading) _then)
       : super(_value, (v) => _then(v as _CartStateLoading));
 
   @override
@@ -347,9 +351,11 @@ abstract class _$CartStateFailureCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$CartStateFailureCopyWithImpl<$Res> extends _$CartStateCopyWithImpl<$Res>
+class __$CartStateFailureCopyWithImpl<$Res>
+    extends _$CartStateCopyWithImpl<$Res>
     implements _$CartStateFailureCopyWith<$Res> {
-  __$CartStateFailureCopyWithImpl(_CartStateFailure _value, $Res Function(_CartStateFailure) _then)
+  __$CartStateFailureCopyWithImpl(
+      _CartStateFailure _value, $Res Function(_CartStateFailure) _then)
       : super(_value, (v) => _then(v as _CartStateFailure));
 
   @override
@@ -390,7 +396,8 @@ class _$_CartStateFailure implements _CartStateFailure {
   }
 
   @override
-  int get hashCode => runtimeType.hashCode ^ const DeepCollectionEquality().hash(message);
+  int get hashCode =>
+      runtimeType.hashCode ^ const DeepCollectionEquality().hash(message);
 
   @JsonKey(ignore: true)
   @override
@@ -477,7 +484,8 @@ abstract class _CartStateFailure implements CartState {
 
   String get message => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  _$CartStateFailureCopyWith<_CartStateFailure> get copyWith => throw _privateConstructorUsedError;
+  _$CartStateFailureCopyWith<_CartStateFailure> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -489,9 +497,11 @@ abstract class _$CartStateSuccessCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$CartStateSuccessCopyWithImpl<$Res> extends _$CartStateCopyWithImpl<$Res>
+class __$CartStateSuccessCopyWithImpl<$Res>
+    extends _$CartStateCopyWithImpl<$Res>
     implements _$CartStateSuccessCopyWith<$Res> {
-  __$CartStateSuccessCopyWithImpl(_CartStateSuccess _value, $Res Function(_CartStateSuccess) _then)
+  __$CartStateSuccessCopyWithImpl(
+      _CartStateSuccess _value, $Res Function(_CartStateSuccess) _then)
       : super(_value, (v) => _then(v as _CartStateSuccess));
 
   @override
@@ -534,7 +544,8 @@ class _$_CartStateSuccess implements _CartStateSuccess {
 
   @override
   int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(postItemCartResponse);
+      runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(postItemCartResponse);
 
   @JsonKey(ignore: true)
   @override
@@ -617,10 +628,11 @@ class _$_CartStateSuccess implements _CartStateSuccess {
 }
 
 abstract class _CartStateSuccess implements CartState {
-  const factory _CartStateSuccess({required CartResponse postItemCartResponse}) =
-      _$_CartStateSuccess;
+  const factory _CartStateSuccess(
+      {required CartResponse postItemCartResponse}) = _$_CartStateSuccess;
 
   CartResponse get postItemCartResponse => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  _$CartStateSuccessCopyWith<_CartStateSuccess> get copyWith => throw _privateConstructorUsedError;
+  _$CartStateSuccessCopyWith<_CartStateSuccess> get copyWith =>
+      throw _privateConstructorUsedError;
 }

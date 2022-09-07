@@ -35,7 +35,7 @@ class ProfileCardWidget extends StatelessWidget {
             ),
             const SizedBox(width: 20),
             Text(
-              'nome',
+              name,
               style: AppTextStyles.sans16bold.copyWith(
                 color: AppColors.lightBlack,
               ),
