@@ -21,6 +21,7 @@ class CartSection extends StatelessWidget {
             price: listCartItensEntity[index].cartPaintDetailsEntity.price,
             title: listCartItensEntity[index].cartPaintDetailsEntity.name,
             image: listCartItensEntity[index].cartPaintDetailsEntity.coverImage,
+            cartItensEntity: listCartItensEntity[index],
           ),
         ),
       );

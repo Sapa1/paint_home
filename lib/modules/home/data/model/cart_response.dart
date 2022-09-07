@@ -25,13 +25,6 @@ class CartResponse extends Equatable {
     };
   }
 
-  // factory CartResponse.fromMap(Map<String, dynamic> map) {
-  //   return CartResponse(
-  //     listCartItensEntity: List<CartItensEntity>.from(
-  //         map['listCartItensEntity']?.map((x) => CartItensEntity.fromMap(x))),
-  //   );
-  // }
-
   factory CartResponse.fromMap(dynamic data) {
     final List<Map<String, dynamic>> list = List.from(data);
     return CartResponse(

@@ -17,6 +17,7 @@ import 'domain/repositories/home_repository.dart';
 import 'domain/usecases/get_cart_itens_usecase.dart';
 import 'domain/usecases/get_paint_usecase.dart';
 import 'domain/usecases/post_item_cart_usecase.dart';
+import 'domain/usecases/put_cart_item_quantity_usecase.dart';
 import 'presentation/bloc/home/home_bloc.dart';
 
 class HomeModule extends Module {
@@ -24,12 +25,13 @@ class HomeModule extends Module {
   List<Bind> get binds => [
         //Bloc
         Bind.factory((i) => HomeBloc(i.get())),
-        Bind.factory((i) => CartBloc(i.get())),
+        Bind.factory((i) => CartBloc(i.get(), i.get())),
 
         //UseCases
         Bind.factory((i) => GetPaintUseCase(i.get())),
         Bind.factory((i) => GetCartItensUseCase(i.get())),
         Bind.factory((i) => PostItemCartUseCase(i.get())),
+        Bind.factory((i) => PutItemCarQuantitytUseCase(i.get())),
 
         //Repositories
         Bind.factory<HomeRepository>((i) => HomeRepositoryImpl(i.get(), i.get())),
