@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_modular/flutter_modular.dart';
+import 'package:paint_home/core/const/routes.dart';
 import 'package:paint_home/core/const/strings.dart';
 import 'package:paint_home/core/styles/colors.dart';
 import 'package:paint_home/core/styles/text_styles.dart';
@@ -82,7 +84,9 @@ class CardShowPaintWidget extends StatelessWidget {
                         DoubleButtonWidget(
                           doubleButtonType: DoubleButtonType.left,
                           text: AppStrings.howToPaint,
-                          onPressed: () {},
+                          onPressed: () {
+                            Modular.to.pushNamed(AppRoutes.howToPaintPage);
+                          },
                         ),
                         const SizedBox(width: 2),
                         DoubleButtonWidget(

@@ -25,6 +25,7 @@ import 'domain/usecases/get_paint_usecase.dart';
 import 'domain/usecases/post_item_cart_usecase.dart';
 import 'domain/usecases/put_cart_item_quantity_usecase.dart';
 import 'presentation/bloc/home/home_bloc.dart';
+import 'presentation/page/how_to_paint.dart';
 
 class HomeModule extends Module {
   @override
@@ -69,6 +70,10 @@ class HomeModule extends Module {
         ChildRoute(
           AppRoutes.profile,
           child: (context, args) => const ProfilePage(),
+        ),
+        ChildRoute(
+          AppRoutes.howToPaint,
+          child: (context, args) => const HowToPaint(),
         ),
       ];
 }
