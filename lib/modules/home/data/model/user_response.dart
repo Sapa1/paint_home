@@ -26,7 +26,7 @@ class UserResponse extends Equatable {
 
   factory UserResponse.fromMap(Map<String, dynamic> map) {
     return UserResponse(
-      userEntity: UserEntity.fromMap(map['userEntity']),
+      userEntity: UserEntity.fromMap(map['']),
     );
   }
 

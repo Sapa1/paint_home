@@ -56,4 +56,9 @@ class AppTextStyles {
     fontSize: 12,
     fontWeight: FontWeight.w600,
   );
+  static TextStyle sans32bold = const TextStyle(
+    fontFamily: 'OpenSans',
+    fontSize: 32,
+    fontWeight: FontWeight.bold,
+  );
 }

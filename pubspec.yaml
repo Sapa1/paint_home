@@ -23,6 +23,7 @@ dependencies:
   universal_platform: ^1.0.0+1
   flutter_svg: ^1.0.3
   dartz: ^0.10.1
+  freezed_annotation: ^1.1.0
 
 scripts:
   build: "flutter packages run build_runner build"
