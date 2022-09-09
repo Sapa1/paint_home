@@ -97,35 +97,30 @@ class _CartItemWidgetState extends State<CartItemWidget> {
                           style: AppTextStyles.sans12semiBold.copyWith(
                             color: AppColors.lightBlack,
                           ),
-                          items:
-                              // widget.cartItensEntity
-                              //     .map(
-                              //       (e) => DropdownMenuItem(
-                              //         value: e.quantity,
-                              //         child: Text('${e.quantity}'),
-                              //       ),
-                              //     )
-                              //     .toList(),
-                              const [
+                          items: [
+                            // const DropdownMenuItem(
+                            //   value: 1,
+                            //   child: Text('1'),
+                            // ),
+                            // const DropdownMenuItem(
+                            //   value: 2,
+                            //   child: Text('2'),
+                            // ),
+                            // const DropdownMenuItem(
+                            //   value: 3,
+                            //   child: Text('3'),
+                            // ),
+                            // const DropdownMenuItem(
+                            //   value: 4,
+                            //   child: Text('4'),
+                            // ),
+                            // const DropdownMenuItem(
+                            //   value: 5,
+                            //   child: Text('5'),
+                            // ),
                             DropdownMenuItem(
-                              value: 1,
-                              child: Text('1'),
-                            ),
-                            DropdownMenuItem(
-                              value: 2,
-                              child: Text('2'),
-                            ),
-                            DropdownMenuItem(
-                              value: 3,
-                              child: Text('3'),
-                            ),
-                            DropdownMenuItem(
-                              value: 4,
-                              child: Text('4'),
-                            ),
-                            DropdownMenuItem(
-                              value: 5,
-                              child: Text('5'),
+                              value: _dropdownValue,
+                              child: Text('${widget.cartItensEntity.quantity}'),
                             ),
                           ],
                           onChanged: dropdownCallBack,

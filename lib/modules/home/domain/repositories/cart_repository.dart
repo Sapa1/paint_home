@@ -9,4 +9,5 @@ abstract class CartRepository {
   Future<Either<Failure, CartResponse>> postItem(PaintEntity paintEntity);
   Future<Either<Failure, String>> putCartItemQuantity(CartItensEntity cartItensEntity);
   Future<Either<Failure, CartResponse>> getCartItens();
+  Future<Either<Failure, CartItensEntity>> clearCart(int id);
 }

@@ -6,4 +6,5 @@ abstract class CartDataSource {
   Future<CartResponse> postItem(PaintEntity paintEntity);
   Future<CartResponse> getCartItens();
   Future<String> putCartItemQuantity(CartItensEntity cartItensEntity);
+  Future<CartItensEntity> clearCart(int id);
 }

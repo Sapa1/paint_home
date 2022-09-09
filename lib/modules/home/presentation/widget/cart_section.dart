@@ -18,9 +18,9 @@ class CartSection extends StatelessWidget {
         itemBuilder: (context, index) => Padding(
           padding: const EdgeInsets.symmetric(vertical: 8),
           child: CartItemWidget(
-            price: listCartItensEntity[index].cartPaintDetailsEntity.price,
-            title: listCartItensEntity[index].cartPaintDetailsEntity.name,
-            image: listCartItensEntity[index].cartPaintDetailsEntity.coverImage,
+            price: listCartItensEntity[index].price.toString(),
+            title: listCartItensEntity[index].name,
+            image: listCartItensEntity[index].coverImage,
             cartItensEntity: listCartItensEntity[index],
           ),
         ),

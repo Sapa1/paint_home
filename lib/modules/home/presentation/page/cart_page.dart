@@ -59,9 +59,13 @@ class _CartPageState extends State<CartPage> {
                             listCartItensEntity: result.listCartItensEntity,
                           ),
                           const SizedBox(height: 30),
-                          const ElevatedButtonWidget(
+                          ElevatedButtonWidget(
                             elevatedButtonType: ElevatedButtonType.purple,
                             text: AppStrings.confirmBuy,
+                            onPressed: () async {
+                              cartBloc.add(
+                                  ClearCartEvent(listCartItensEntity: result.listCartItensEntity));
+                            },
                           ),
                           const SizedBox(height: 30),
                         ],
