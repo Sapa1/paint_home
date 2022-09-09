@@ -12,11 +12,11 @@ class CartDataSourceImpl implements CartDataSource {
 
   @override
   Future<CartResponse> postItem(PaintEntity paintEntity) async {
-    final response = await paintDio.post(
+    await paintDio.post(
       '/cart',
       data: paintEntity.toJson(),
     );
-    return CartResponse.fromMap(response.data);
+    return const CartResponse(listCartItensEntity: []);
   }
 
   @override
@@ -26,12 +26,11 @@ class CartDataSourceImpl implements CartDataSource {
   }
 
   @override
-  Future<String> putCartItemQuantity(CartItensEntity cartItensEntity) async {
+  Future<void> putCartItemQuantity(CartItensEntity cartItensEntity) async {
     await paintDio.put(
       '/cart/${cartItensEntity.id}',
       data: cartItensEntity.toJson(),
     );
-    return 'CartResponse.fromMap(response.data)';
   }
 
   @override

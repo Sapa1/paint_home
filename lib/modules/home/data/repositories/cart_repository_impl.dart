@@ -44,7 +44,7 @@ class CartRepositoryImpl extends CartRepository with HandleFailures {
   }
 
   @override
-  Future<Either<Failure, String>> putCartItemQuantity(CartItensEntity cartItensEntity) async {
+  Future<Either<Failure, void>> putCartItemQuantity(CartItensEntity cartItensEntity) async {
     try {
       final result = await _cartDataSource.putCartItemQuantity(cartItensEntity);
       return Right(result);

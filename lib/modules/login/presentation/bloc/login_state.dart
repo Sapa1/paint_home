@@ -7,5 +7,5 @@ abstract class LoginState with _$LoginState {
   const factory LoginState.initial() = _LoginStateInitial;
   const factory LoginState.loading() = _LoginStateLoading;
   const factory LoginState.failure(String message) = _LoginStateFailure;
-  const factory LoginState.success() = _LoginStateConfirmed;
+  const factory LoginState.success() = _LoginStateSuccess;
 }

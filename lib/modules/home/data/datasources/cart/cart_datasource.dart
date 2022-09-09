@@ -5,6 +5,6 @@ import '../../model/cart_response.dart';
 abstract class CartDataSource {
   Future<CartResponse> postItem(PaintEntity paintEntity);
   Future<CartResponse> getCartItens();
-  Future<String> putCartItemQuantity(CartItensEntity cartItensEntity);
+  Future<void> putCartItemQuantity(CartItensEntity cartItensEntity);
   Future<CartItensEntity> clearCart(int id);
 }

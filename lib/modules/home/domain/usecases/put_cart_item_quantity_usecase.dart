@@ -5,12 +5,12 @@ import '../../../../core/usecases/usecase.dart';
 import '../entities/cart_itens_entity.dart';
 import '../repositories/cart_repository.dart';
 
-class PutItemCarQuantitytUseCase implements UseCase<String, CartItensEntity> {
+class PutItemCarQuantitytUseCase implements UseCase<void, CartItensEntity> {
   final CartRepository cartRepository;
 
   PutItemCarQuantitytUseCase(this.cartRepository);
 
   @override
-  Future<Either<Failure, String>> call(CartItensEntity cartItensEntity) async =>
+  Future<Either<Failure, void>> call(CartItensEntity cartItensEntity) async =>
       cartRepository.putCartItemQuantity(cartItensEntity);
 }
