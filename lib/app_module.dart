@@ -10,6 +10,7 @@ import 'core/local_storage/local_storage_impl.dart';
 import 'core/local_storage/secure_local_storage_impl.dart';
 import 'core/presentation/bloc/show_password_bloc.dart';
 import 'modules/login/login_module.dart';
+import 'modules/register/register_module.dart';
 
 class AppModule extends Module {
   AppModule();
@@ -41,5 +42,6 @@ class AppModule extends Module {
   List<ModularRoute> get routes => [
         ModuleRoute(AppRoutes.initial, module: LoginModule()),
         ModuleRoute(AppRoutes.home, module: HomeModule()),
+        ModuleRoute(AppRoutes.register, module: RegisterModule()),
       ];
 }

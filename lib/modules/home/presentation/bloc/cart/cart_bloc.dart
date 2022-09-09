@@ -44,7 +44,6 @@ class CartBloc extends Bloc<CartEvent, CartState> {
   }
 
   Stream<CartState> _mapGetCart() async* {
-    // yield const CartState.loading();
     final response = await getCartItensUseCase();
 
     yield response.fold(
@@ -54,7 +53,6 @@ class CartBloc extends Bloc<CartEvent, CartState> {
   }
 
   Stream<CartState> _mapPostItemCart(PaintEntity paintEntity) async* {
-    // yield const CartState.loading();
     final response = await postItemCartUseCase(paintEntity);
 
     yield response.fold(

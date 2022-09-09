@@ -25,7 +25,6 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
   }
 
   Stream<HomeState> _mapGetPaint() async* {
-    // yield const HomeState.loading();
     final response = await getPaintUseCase();
 
     yield response.fold(

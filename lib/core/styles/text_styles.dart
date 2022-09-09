@@ -19,7 +19,6 @@ class AppTextStyles {
   static TextStyle sans14light = const TextStyle(
     fontFamily: 'OpenSans-Light',
     fontSize: 14,
-    // fontWeight: FontWeight.w300,
   );
   static TextStyle sans18bold = const TextStyle(
     fontFamily: 'OpenSans',

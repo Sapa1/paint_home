@@ -9,7 +9,6 @@ class LoginDataSourceImpl implements LoginDataSource {
 
   LoginDataSourceImpl(this.paintDio);
 
-//TODO: ver se esse endpoint está correto ( se não é pra mandar a informação do usuario )
   @override
   Future<LoginResponse> doLogin(LoginEntity loginEntity) async {
     final response = await paintDio.get('/login');

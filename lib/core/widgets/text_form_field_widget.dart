@@ -34,15 +34,12 @@ class TextFormFieldWidget extends StatelessWidget {
     Key? key,
   }) : super(key: key);
 
-// estilo do texto digitado
   TextStyle get styleText => AppTextStyles.sans16regular.copyWith(
         color: AppColors.white80Opacity,
       );
 
-  //estilo do texto inicial interno
   TextStyle get hintStyle => AppTextStyles.sans16regular.copyWith(color: AppColors.white40Opacity);
 
-//estilo da borda sem foco
   InputBorder get enabledBorder => const OutlineInputBorder(
         borderRadius: BorderRadius.all(Radius.circular(8)),
         borderSide: BorderSide(

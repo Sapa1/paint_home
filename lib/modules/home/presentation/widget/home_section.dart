@@ -116,9 +116,13 @@ class _HomeSectionState extends State<HomeSection> {
                 text: AppStrings.addToCart,
                 elevatedButtonType: ElevatedButtonType.purple,
                 onPressed: () {
-                  _cartBloc.add(PostItemEvent(
-                      paintEntity: widget.listPaintEntity[pageController.page!.toInt()]
-                          .copyWith(quantity: 1)));
+                  _cartBloc.add(
+                    PostItemEvent(
+                      paintEntity: widget.listPaintEntity[pageController.page!.toInt()].copyWith(
+                        quantity: 1,
+                      ),
+                    ),
+                  );
                 },
               ),
             ),
