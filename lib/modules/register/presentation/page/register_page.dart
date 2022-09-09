@@ -132,7 +132,7 @@ class _RegisterPageState extends State<RegisterPage> {
                     ),
                     const SizedBox(height: 90),
                     Text(
-                      'Criar conta',
+                      AppStrings.createAccount,
                       style: AppTextStyles.sans22bold.copyWith(
                         color: AppColors.white,
                       ),
@@ -141,12 +141,12 @@ class _RegisterPageState extends State<RegisterPage> {
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        const TextWidget(text: 'Nome'),
+                        const TextWidget(text: AppStrings.name),
                         TextFormFieldWidget(
                           controller: _controllerName,
                           focusNode: _nameFocus,
                           textInputAction: TextInputAction.next,
-                          hintText: 'Nome',
+                          hintText: AppStrings.name,
                           validator: Validators.multiple([
                             Validators.required(AppStrings.requiredField),
                           ]),
@@ -196,7 +196,7 @@ class _RegisterPageState extends State<RegisterPage> {
                           },
                         ),
                         const SizedBox(height: 20),
-                        const TextWidget(text: 'Confirmar senha'),
+                        const TextWidget(text: AppStrings.confirmPassword),
                         BlocBuilder<ShowPasswordBloc, ShowPasswordState>(
                           bloc: _showConfirmPasswordBloc,
                           builder: (context, state) {
@@ -204,7 +204,7 @@ class _RegisterPageState extends State<RegisterPage> {
                               textInputAction: TextInputAction.done,
                               focusNode: _confirmPasswordFocus,
                               obscureText: state.showPassword,
-                              hintText: 'Repita sua senha',
+                              hintText: AppStrings.repeatYourPassword,
                               controller: _controllerConfirmPassword,
                               suffixIcon: state.showPassword
                                   ? const Icon(Icons.visibility_off)
@@ -231,7 +231,7 @@ class _RegisterPageState extends State<RegisterPage> {
                     const SizedBox(height: 40),
                     ElevatedButtonWidget(
                       elevatedButtonType: ElevatedButtonType.white,
-                      text: 'Criar conta',
+                      text: AppStrings.createAccount,
                       onPressed: () {
                         _onSubmitted();
                       },

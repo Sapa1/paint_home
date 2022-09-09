@@ -17,4 +17,7 @@ class AppStrings {
   static const cart = 'Carrinho';
   static const store = 'Loja';
   static const profile = 'Perfil';
+  static const name = 'Nome';
+  static const confirmPassword = 'Confirmar senha';
+  static const repeatYourPassword = 'Repita sua senha';
 }
