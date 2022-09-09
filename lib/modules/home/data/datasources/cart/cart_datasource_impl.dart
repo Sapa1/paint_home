@@ -12,7 +12,10 @@ class CartDataSourceImpl implements CartDataSource {
 
   @override
   Future<CartResponse> postItem(PaintEntity paintEntity) async {
-    final response = await paintDio.post('/cart');
+    final response = await paintDio.post(
+      '/cart',
+      data: paintEntity.toJson(),
+    );
     return CartResponse.fromMap(response.data);
   }
 
@@ -29,5 +32,11 @@ class CartDataSourceImpl implements CartDataSource {
       data: cartItensEntity.toJson(),
     );
     return 'CartResponse.fromMap(response.data)';
+  }
+
+  @override
+  Future<CartItensEntity> clearCart(int id) async {
+    final response = await paintDio.delete('/cart/$id');
+    return CartItensEntity.fromMap(response.data);
   }
 }

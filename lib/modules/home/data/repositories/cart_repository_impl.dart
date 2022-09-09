@@ -54,4 +54,16 @@ class CartRepositoryImpl extends CartRepository with HandleFailures {
       return Left(await handleFailure(_connectionStatus, e, s));
     }
   }
+
+  @override
+  Future<Either<Failure, CartItensEntity>> clearCart(int id) async {
+    try {
+      final result = await _cartDataSource.clearCart(id);
+      return Right(result);
+    } on DioError catch (e, s) {
+      return Left(await handleFailure(_connectionStatus, e, s));
+    } on Exception catch (e, s) {
+      return Left(await handleFailure(_connectionStatus, e, s));
+    }
+  }
 }

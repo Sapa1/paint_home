@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_modular/flutter_modular.dart';
 import 'package:paint_home/core/const/strings.dart';
 import 'package:paint_home/core/styles/colors.dart';
 import 'package:paint_home/core/styles/text_styles.dart';
@@ -7,6 +8,8 @@ import 'package:paint_home/modules/home/domain/entities/paint_entity.dart';
 
 import '../../../../core/widgets/card_show_paint_widget.dart';
 import '../../../../core/widgets/description_paint_widget.dart';
+import '../bloc/cart/cart_bloc.dart';
+import '../bloc/cart/cart_event.dart';
 
 class HomeSection extends StatefulWidget {
   final List<PaintEntity> listPaintEntity;
@@ -23,6 +26,8 @@ class HomeSection extends StatefulWidget {
 }
 
 class _HomeSectionState extends State<HomeSection> {
+  late final CartBloc _cartBloc;
+
   late final PageController pageController;
   late final PageController descriptionController;
 
@@ -31,6 +36,8 @@ class _HomeSectionState extends State<HomeSection> {
     super.initState();
     pageController = PageController(viewportFraction: 0.8);
     descriptionController = PageController();
+
+    _cartBloc = Modular.get<CartBloc>();
   }
 
   @override
@@ -108,7 +115,11 @@ class _HomeSectionState extends State<HomeSection> {
               child: ElevatedButtonWidget(
                 text: AppStrings.addToCart,
                 elevatedButtonType: ElevatedButtonType.purple,
-                onPressed: () {},
+                onPressed: () {
+                  _cartBloc.add(PostItemEvent(
+                      paintEntity: widget.listPaintEntity[pageController.page!.toInt()]
+                          .copyWith(quantity: 1)));
+                },
               ),
             ),
           ],

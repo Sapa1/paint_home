@@ -15,4 +15,6 @@ class AppStrings {
   static const addToCart = 'Adicionar ao carrinho';
   static const confirmBuy = 'Confirmar compra';
   static const cart = 'Carrinho';
+  static const store = 'Loja';
+  static const profile = 'Perfil';
 }
